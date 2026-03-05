@@ -18,17 +18,17 @@ const Home = () => {
             </p>
           </div>
           <div className=" mb-30 mt-10 w-full flex gap-5 justify-center items-center ">
-            <button className=" border-[hsl(var(--border-color))] transition ease-in duration-15s hover:shadow-none border-1 px-5 py-2 rounded-md shadow-lg  ">
+            <button className=" border-[hsl(var(--border-color))] transition ease-in duration-15s hover:shadow-none border px-5 py-2 rounded-md shadow-lg  ">
               View Projects
             </button>
-            <button className="   border-[hsl(var(--border-color))] transition ease-in duration-155  hover:shadow-none border-1 px-5 py-2 rounded-md shadow-lg ">
+            <button className="   border-[hsl(var(--border-color))] transition ease-in duration-155  hover:shadow-none border px-5 py-2 rounded-md shadow-lg ">
               Contact Me
             </button>
           </div>
         </main>
         <div className="   items-center bg-[hsl(var(--bg1-color))] mt-5 mb-5 rounded-2xl w-[90vw] h-1000"></div>
 
-        <footer className="flex justify-center border-[hsl(var(--border-color))] border-1 items-center w-full   ">
+        <footer className="flex justify-center border-[hsl(var(--border-color))] border items-center w-full   ">
           <section className="w-full flex my-2  justify-around items-center">
             <div className="">
               <p className="text-center text-sm   ">

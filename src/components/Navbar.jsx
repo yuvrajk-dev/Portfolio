@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <header className=" sticky top-3 z-50  flex justify-center  py-3 w-full ">
-      <nav className=" shadow-sm border-1 border-[hsl(var(--border-color))] rounded-4xl  backdrop-blur-sm flex items-center justify-between w-[80vw] h-14">
+      <nav className=" shadow-sm border border-[hsl(var(--border-color))] rounded-4xl  backdrop-blur-sm flex items-center justify-between w-[80vw] h-14">
         {/* logo */}
         <a href="/" className=" font-bold ml-10 text-lg  ">
           Yuvraj Kumar
