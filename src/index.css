@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: 0, 0%, 95%;
+  --border-color: 0, 0%, 81%;
+  --bg1-color: 0, 0%, 100%;
+
+  --text-color: 0 0% 40%;
+  --text-muted: 240 3% 12%;
+
+  /* overflow: hidden; */
+}
+
+body {
+  background-color: hsl(var(--bg-color));
+}
