@@ -1,16 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Sekuya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import "tailwindcss";
 
+/* https://tozaburo.github.io/ui-shades-generator/?settings=0.79%2C0.1741%2C155.38%2Cgreen%2Cstring%2C1.2%2C5%2C99%2C67%2Cstring%2Csigmoid%2Cfalse%2C0.79%2C0.1741%2C155.38%2Cgreen%2Cstring%2C1.2%2C5%2C99%2C67%2Cstring%2Csigmoid%2Cfalse */
 :root {
-  --bg-color: 0, 0%, 95%;
-  --border-color: 0, 0%, 81%;
-  --bg1-color: 0, 0%, 100%;
+  --bg-dark: hsl(0 0% 90%);
+  --bg: hsl(300 0% 95%);
+  --bg-light: hsl(300 50% 100%);
+  --text: hsl(300 0% 4%);
+  --text-muted: hsl(0 0% 28%);
 
-  --text-color: 0 0% 40%;
-  --text-muted: 240 3% 12%;
+  --shadow-s:
+    inset 0 1px 2px #ffffff30, /* top highlight */ 0 1px 2px #00000030,
+    /* dark shadow */ 0 2px 4px #00000015; /* soft shadow */
 
-  /* overflow: hidden; */
+  --shadow-m:
+    inset 0 1px 2px #ffffff50, /* top highlight */ 0 2px 4px #00000030,
+    /* dark shadow */ 0 4px 8px #00000015; /* soft shadow */
+
+  --shadow-l:
+    inset 0 1px 2px #ffffff70, /* top highlight */ 0 4px 6px #00000030,
+    /* dark shadow */ 0 6px 10px #00000015; /* soft shadow */
+}
+
+.dark {
+  --bg-dark: hsl(336 0% 1%);
+  --bg: hsl(300 0% 4%);
+  --bg-light: hsl(0 0% 9%);
+  --text: hsl(300 0% 95%);
+  --text-muted: hsl(300 0% 69%);
 }
 
 body {
-  background-color: hsl(var(--bg-color));
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  background-color: var(--bg-dark);
+  color: var(--text);
 }
