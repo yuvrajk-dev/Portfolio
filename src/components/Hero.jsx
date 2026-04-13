@@ -7,11 +7,10 @@ import Contact from "./Contact";
 const Hero = () => {
   return (
     <>
-      <div className=" flex flex-col justify-center items-center">
+      <div className=" flex flex-col flex-1  justify-center items-center">
         <AuthorName />
         <AuthorBio />
         <Cards />
-        <Contact />
       </div>
     </>
   );

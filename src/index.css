@@ -31,6 +31,10 @@
   --text-muted: hsl(300 0% 69%);
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;

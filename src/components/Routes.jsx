@@ -9,7 +9,11 @@ const routes = createBrowserRouter([
     element: <Home />,
     children: [
       { path: "/", element: <Hero /> },
+      { path: "/home", element: <Hero /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/projects", element: <Contact /> },
+      { path: "/about", element: <Contact /> },
+      { path: "/skills", element: <Contact /> },
     ],
   },
 ]);
