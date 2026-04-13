@@ -1,4 +1,4 @@
-import myImage from "../assets/Avatar1.png";
+import myImage from "../../assets/Avatar1.png";
 
 const AuthorBio = () => {
   return (

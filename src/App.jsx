@@ -1,7 +1,5 @@
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home";
 import { RouterProvider } from "react-router-dom";
-import routes from "./components/Routes";
+import routes from "./components/routes/Routes";
 
 // https://webofdevs.com/
 

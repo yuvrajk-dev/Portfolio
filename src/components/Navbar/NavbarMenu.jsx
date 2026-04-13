@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const NavbarMenu = ({ isOpen, setIsOpen, menuRef }) => {
-  const menuItems = ["about", "skills", "projects", "contact", "home"];
+  const menuItems = ["home", "about", "skills", "projects", "contact"];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -28,7 +28,7 @@ const NavbarMenu = ({ isOpen, setIsOpen, menuRef }) => {
       initial="close"
       animate={isOpen ? "open" : "close"}
       transition={{ type: "spring", stiffness: 150, damping: 15 }}
-      className="  flex p-10 items-center text-center lg:text-left md:text-left b   text-5xl   rounded-2xl right-5  w-[90vw] md:w-[50vw] lg:w-[30vw] bg-(--bg) h-110 top-25 z-50 fixed"
+      className="  flex p-10 items-center text-center lg:text-left md:text-left b   text-5xl   rounded-2xl right-[5vw] lg:right-5 md:right-5 w-[90vw] md:w-[40vw] lg:w-[30vw] bg-(--bg-light) h-110 top-25 z-50  fixed"
     >
       <motion.ul
         variants={{
@@ -59,7 +59,17 @@ const NavbarMenu = ({ isOpen, setIsOpen, menuRef }) => {
                 open: { x: 0, opacity: 1 },
               }}
             >
-              <NavLink to={`/${items}`}>{items}</NavLink>
+              <NavLink
+                className={
+                  ({ isActive }) =>
+                    isActive
+                      ? "text-(--text)" // active → dark
+                      : "text-(--text-muted)" // inactive → muted
+                }
+                to={`/${items}`}
+              >
+                {items}
+              </NavLink>
             </motion.li>
           );
         })}
