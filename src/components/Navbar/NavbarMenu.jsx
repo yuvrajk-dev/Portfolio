@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "motion/react";
 import { NavLink } from "react-router-dom";
 
@@ -32,9 +31,10 @@ const NavbarMenu = ({ isOpen }) => {
         }}
         className="flex flex-1 flex-col  gap-4"
       >
-        {menuItems.map((items) => {
+        {menuItems.map((items, i) => {
           return (
             <motion.li
+              key={i}
               className="cursor-pointer  hover:text-(--text-muted)"
               whileHover={{ x: 15 }}
               transition={{ type: "spring", stiffness: 200 }}

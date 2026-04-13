@@ -2,30 +2,10 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import NavbarMenu from "./NavbarMenu";
 import NavToggleButton from "./NavToggleButton";
+import NavbarClock from "./NavbarClock";
 
 const Navbar = () => {
-  const [time, setTime] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-
-      const indianTime = now.toLocaleTimeString("en-IN", {
-        timeZone: "Asia/Kolkata",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-      });
-
-      setTime(indianTime);
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <header className="sticky  top-0 px-8  z-999 flex  text-xl  items-center justify-between h-20  ">
@@ -46,14 +26,16 @@ const Navbar = () => {
           }}
         ></motion.div>
         <p className="  leading-none translate-y-px">INDIA</p>
-        <span className=" leading-none translate-y-px  ">{time}</span>
+        <span className=" leading-none translate-y-px  ">
+          <NavbarClock />
+        </span>
       </div>
 
       {/* right */}
       <div className=" relative z-10">
         <NavToggleButton isOpen={isOpen} setIsOpen={setIsOpen} />
         {/* right card */}
-        <NavbarMenu isOpen={isOpen} />
+        <NavbarMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </header>
   );
