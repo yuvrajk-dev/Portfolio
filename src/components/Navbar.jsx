@@ -52,9 +52,13 @@ const Navbar = () => {
         <motion.button
           onClick={() => setIsOpen((prev) => !prev)}
           initial="close"
-          whileHover="hover"
+          whileHover={!isOpen ? "hover" : undefined}
           animate={isOpen ? "open" : "close"}
-          variants={{ rest: { scale: 1 }, hover: { scale: 1.1 } }}
+          variants={{
+            close: { scale: 1 },
+            hover: { scale: 1.1 },
+            open: { scale: 1.1 },
+          }}
           className="py-1 border  rounded px-2 "
         >
           <motion.div className="flex gap-1  justify-center  items-center  ">
@@ -80,8 +84,9 @@ const Navbar = () => {
             <motion.div
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
               variants={{
-                rest: { rotate: 0 },
+                close: { rotate: 0 },
                 hover: { rotate: 90 },
+                open: { rotate: 180 },
               }}
               className={` rounded-full gap-0.5 flex bg-(--text) justify-center items-center w-4 h-4 `}
             >
