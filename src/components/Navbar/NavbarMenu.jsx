@@ -1,8 +1,24 @@
 import { motion } from "motion/react";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-const NavbarMenu = ({ isOpen }) => {
+const NavbarMenu = ({ isOpen, setIsOpen, menuRef }) => {
   const menuItems = ["about", "skills", "projects", "contact", "home"];
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!menuRef.current) return;
+      if (menuRef.current.contains(event.target)) {
+        return;
+      }
+      setIsOpen(false);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setIsOpen, menuRef]);
+
   return (
     <motion.div
       variants={{
@@ -12,7 +28,7 @@ const NavbarMenu = ({ isOpen }) => {
       initial="close"
       animate={isOpen ? "open" : "close"}
       transition={{ type: "spring", stiffness: 150, damping: 15 }}
-      className="  flex p-10 items-center text-center lg:text-left md:text-left b   text-5xl   rounded-2xl right-5  w-[90vw] md:w-[50vw] lg:w-[30vw] bg-(--bg) h-110 top-25 -z-10 fixed"
+      className="  flex p-10 items-center text-center lg:text-left md:text-left b   text-5xl   rounded-2xl right-5  w-[90vw] md:w-[50vw] lg:w-[30vw] bg-(--bg) h-110 top-25 z-50 fixed"
     >
       <motion.ul
         variants={{

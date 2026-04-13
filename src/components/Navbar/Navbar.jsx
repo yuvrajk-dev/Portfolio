@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 import NavbarMenu from "./NavbarMenu";
 import NavToggleButton from "./NavToggleButton";
 import NavbarClock from "./NavbarClock";
+import { useRef } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  let menuRef = useRef(null);
 
   return (
     <header className="sticky  top-0 px-8  z-999 flex  text-xl  items-center justify-between h-20  ">
@@ -32,10 +34,10 @@ const Navbar = () => {
       </div>
 
       {/* right */}
-      <div className=" relative z-10">
+      <div ref={menuRef} className=" relative z-10">
         <NavToggleButton isOpen={isOpen} setIsOpen={setIsOpen} />
         {/* right card */}
-        <NavbarMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+        <NavbarMenu menuRef={menuRef} isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </header>
   );
