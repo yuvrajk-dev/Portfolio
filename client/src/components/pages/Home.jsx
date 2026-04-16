@@ -3,10 +3,10 @@ import Cards from "./Cards";
 
 const Home = () => {
   return (
-    <>
+    <div className="flex-1  ">
       <Author />
       <Cards />
-    </>
+    </div>
   );
 };
 
