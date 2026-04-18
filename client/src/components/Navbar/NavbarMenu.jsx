@@ -60,6 +60,7 @@ const NavbarMenu = ({ isOpen, setIsOpen, menuRef }) => {
               }}
             >
               <NavLink
+                onClick={() => setIsOpen(false)}
                 className={
                   ({ isActive }) =>
                     isActive

@@ -47,10 +47,10 @@ const NavToggleButton = ({ isOpen, setIsOpen }) => {
             hover: { rotate: 90 },
             open: { rotate: 180 },
           }}
-          className={` rounded-full gap-0.5 flex bg-(--text) justify-center items-center w-4 h-4 `}
+          className={` rounded-full gap-0.5 flex border border-(--text) justify-center items-center w-4 h-4 `}
         >
-          <div className={`  h-1 w-1 rounded-full bg-(--bg)`}></div>
-          <div className={`  h-1 w-1 rounded-full bg-(--bg)`}></div>
+          <div className={`  h-1 w-1 rounded-full bg-(--text)`}></div>
+          <div className={`  h-1 w-1 rounded-full bg-(--text) `}></div>
         </motion.div>
       </motion.div>
     </motion.button>
