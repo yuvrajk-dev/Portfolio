@@ -20,7 +20,7 @@ const Author = () => {
         rotate,
       }}
       transition={{ type: "spring", stiffness: 80, damping: 14 }}
-      className="sticky top-20 -z-1  bg-(--bg)   flex flex-col flex-1   justify-center items-center"
+      className="sticky  top-20 -z-1  bg-(--bg)   flex flex-col flex-1   justify-center items-center"
     >
       <AuthorName />
       <AuthorBio />

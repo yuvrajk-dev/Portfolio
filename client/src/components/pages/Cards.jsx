@@ -3,7 +3,7 @@ import ProjectsCard from "../projects/ProjectsCard";
 
 const Cards = () => {
   return (
-    <div className="bg-(--bg) overflow-hidden h-screen pt-20 w-full p-5 flex flex-col">
+    <div className="bg-(--bg) overflow-hidden h-scree pt-20 w-full p-5 flex flex-col">
       {/* TITLE */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 80, filter: "blur(6px)" }}
