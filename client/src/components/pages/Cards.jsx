@@ -3,7 +3,7 @@ import ProjectsCard from "../projects/ProjectsCard";
 
 const Cards = () => {
   return (
-    <div className="bg-(--bg) overflow-hidden h-scree pt-20 w-full p-5 flex flex-col">
+    <div className="bg-(--bg)   overflow-hidden min-h-screen items-center  w-full p-5 flex flex-col">
       {/* TITLE */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 80, filter: "blur(6px)" }}
@@ -14,8 +14,8 @@ const Cards = () => {
           damping: 14,
           delay: 0.1,
         }}
-        viewport={{ amount: 0.5 }}
-        className="flex justify-center  items-center font-bold leading-none text-[10vw]"
+        viewport={{ amount: 0.5, margin: "80px 0px 0px 0px" }}
+        className="flex justify-center mt-30  mb-10 items-center font-bold leading-none text-[15vw] md:text-[10vw] lg:text-[10vw]"
       >
         PROJECTS
       </motion.div>

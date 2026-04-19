@@ -52,18 +52,18 @@ const ProjectsCard = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ amount: 0.5 }}
-      className="h-100 gap-5 w-full p-5  flex flex-col lg:flex-row"
+      className="w-full p-10 gap-20 flex flex-col justify-center items-center lg:flex-row  "
     >
       {/* LEFT */}
       <motion.div
         variants={leftCard}
-        className=" bg-amber-500 flex-1 rounded-2xl"
+        className=" bg-amber-500 w-full rounded-2xl max-w-100 aspect-square"
       ></motion.div>
 
       {/* RIGHT */}
       <motion.div
         variants={rightCard}
-        className="flex-1 bg-amber-500 rounded-2xl"
+        className="w-full bg-amber-500 rounded-2xl max-w-100 aspect-square"
       ></motion.div>
     </motion.div>
   );

@@ -2,7 +2,7 @@ import myImage from "../../assets/Avatar1.png";
 
 const AuthorBio = () => {
   return (
-    <div className=" flex justify-center flex-col md:flex-row  lg:flex-row p-5 gap-3 pb-40 items-center  ">
+    <div className=" flex  justify-center flex-col md:flex-row  lg:flex-row p-5 gap-3  items-center  ">
       <div className=" w-50 h-50 ">
         <img src={myImage} alt="profile" />
       </div>

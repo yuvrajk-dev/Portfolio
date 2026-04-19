@@ -6,7 +6,7 @@ import { useTransform, motion } from "motion/react";
 
 const Author = () => {
   const scrollYProgress = useOutletContext();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.3]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -2]);
   const blur = useTransform(scrollYProgress, [0, 1], [0, 3]);
   const filter = useTransform(blur, (value) => `blur(${value}px)`);
@@ -20,7 +20,7 @@ const Author = () => {
         rotate,
       }}
       transition={{ type: "spring", stiffness: 80, damping: 14 }}
-      className="sticky  top-20 -z-1  bg-(--bg)   flex flex-col flex-1   justify-center items-center"
+      className="sticky  top-20 -z-1  bg-(--bg)   flex flex-col   pb-20  justify-center items-center"
     >
       <AuthorName />
       <AuthorBio />
