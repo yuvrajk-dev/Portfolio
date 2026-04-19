@@ -44,7 +44,7 @@ const MouseRender = () => {
           }}
         >
           <motion.div
-            className="border rounded-full w-3 h-3 "
+            className="border rounded-full w-2 h-2 "
             initial={{ scale: 1 }}
             animate={{
               scale: [1, 1.5, 1],

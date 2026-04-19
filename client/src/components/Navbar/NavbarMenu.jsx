@@ -28,7 +28,7 @@ const NavbarMenu = ({ isOpen, setIsOpen, menuRef }) => {
       initial="close"
       animate={isOpen ? "open" : "close"}
       transition={{ type: "spring", stiffness: 80, damping: 12 }}
-      className="  flex p-10 items-center text-center lg:text-left md:text-left b   text-5xl   rounded-2xl right-[5vw] lg:right-5 md:right-5 w-[90vw] md:w-[40vw] lg:w-[30vw] bg-(--bg-light) h-110 top-25 z-50  fixed"
+      className="  flex  p-10 items-center text-center lg:text-left md:text-left b   text-5xl   rounded-2xl right-[5vw] lg:right-5 md:right-5 w-[90vw] md:w-[40vw] lg:w-[30vw] bg-(--bg-light) h-[70vh] lg:h-110 md:h-110 top-25 z-50  fixed"
     >
       <motion.ul
         variants={{
