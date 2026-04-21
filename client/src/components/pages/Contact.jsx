@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import RoutePageTemplate from "./RoutePageTemplate";
 
 const Contact = () => {
-  return <RoutePageTemplate title={"ABOUT"}>jkbkbk</RoutePageTemplate>;
+  return <RoutePageTemplate title={"ABOUT"}></RoutePageTemplate>;
 };
 
 export default Contact;

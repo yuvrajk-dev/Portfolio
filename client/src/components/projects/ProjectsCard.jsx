@@ -52,7 +52,7 @@ const ProjectsCard = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ amount: 0.5 }}
-      className="w-full p-10 gap-20 flex flex-col justify-center items-center lg:flex-row  "
+      className="w-full p-10 gap-20 flex flex-col justify-center items-center lg:flex-row md:flex-row "
     >
       {/* LEFT */}
       <motion.div
