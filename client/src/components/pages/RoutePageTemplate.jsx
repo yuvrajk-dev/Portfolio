@@ -14,10 +14,10 @@ const RoutePageTemplate = ({ title, children }) => {
             hidden: { y: "-100%" },
             show: {
               y: 0,
-              transition: { duration: 0.8, ease: "easeOut", delay: 0.3 },
+              transition: { duration: 0.8, ease: "easeInOut", delay: 0.3 },
             },
           }}
-          className="p-5   flex-1 flex md:justify-start lg:justify-start justify-center md:items-start lg:items-start items-center flex-col gap-1 bg-(--bg-light)  "
+          className="p-5   flex md:justify-start lg:justify-start justify-center md:items-start lg:items-start items-center flex-col gap-1 bg-(--bg-light)  "
         >
           <h1 className="text-[10vw]  ">{title}</h1>
         </motion.div>
