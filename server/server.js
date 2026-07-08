@@ -5,7 +5,7 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 const io = new Server(PORT, {
   cors: {
-    origin: "*",
+    origin: [process.env.CLIENT_URL, "http://localhost:5173"],
   },
 });
 
