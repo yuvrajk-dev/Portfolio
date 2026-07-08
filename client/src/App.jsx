@@ -43,5 +43,5 @@ function App() {
     </>
   );
 }
-// node is even driven arcitechure
+
 export default App;
