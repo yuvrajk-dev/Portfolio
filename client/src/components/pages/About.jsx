@@ -1,137 +1,90 @@
 import React from "react";
-import { easeOut, motion } from "motion/react";
+import { motion, easeOut } from "motion/react";
 import RoutePageTemplate from "./RoutePageTemplate";
 
-const data = [
+const cards = [
   {
-    title: "Email",
-    value: "yuvrajk.dev@gmail.com",
-    link: "mailto:yuvrajk.dev@gmail.com",
+    title: "Who I Am",
+    body: "Frontend Developer from Patna, India. I enjoy turning ideas into polished, production-ready web apps that feel good to use.",
   },
   {
-    title: "GitHub",
-    value: "yuvrajk-dev",
-    link: "https://github.com/yuvrajk-dev",
+    title: "What Drives Me",
+    body: "I care about clean code, smooth interactions, and shipping things that actually work. Every project is a chance to learn something new.",
   },
   {
-    title: "LinkedIn",
-    value: "yuvrajkumar01",
-    link: "https://www.linkedin.com/in/yuvrajkumar01/",
+    title: "Background",
+    body: "B.Sc. in Information Technology from Anugrah Narayan College, Patna. Self-driven beyond the classroom — most of what I know came from building real projects.",
   },
   {
-    title: "Twitter",
-    value: "@yuvvi_k",
-    link: "https://x.com/yuvvi_k",
+    title: "Right Now",
+    body: "Expanding into TypeScript and Next.js while deepening my Node.js and Express skills. Open to collaboration, freelance, or a full-time role.",
   },
 ];
 
-const parentVariants = {
+const containerVariants = {
   hidden: {},
   show: {
-    transition: {
-      delayChildren: 1.2,
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const borderVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      delay: 1,
-      duration: 0.6,
-      ease: easeOut,
-    },
-  },
-};
-
-const titleVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { duration: 0.6, ease: easeOut, delay: 0.8 },
-  },
-};
-
-const subtitleVariant = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { duration: 0.6, ease: easeOut, delay: 1.1 },
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
   },
 };
 
 const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: -50,
-    filter: "blur(6px)",
-  },
+  hidden: { opacity: 0, y: 30, scale: 0.97 },
   show: {
-    y: 0,
     opacity: 1,
-    filter: "blur(0px)",
-    transition: {
-      duration: 0.6,
-      ease: easeOut,
-    },
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.45, ease: easeOut },
   },
 };
 
-const Contact = () => {
+const About = () => {
   return (
-    <RoutePageTemplate title={"CONTACT"}>
-      <motion.div className="px-10 lg:px-20" initial="hidden" animate="show">
-        <div className="overflow-hidden text-center max-w-2xl mx-auto mt-10">
-          <motion.h2
-            variants={titleVariants}
-            className="text-2xl font-semibold mb-3"
-          >
-            Let's build something meaningful
-          </motion.h2>
-
-          <div className="overflow-hidden">
-            <motion.p
-              variants={subtitleVariant}
-              className="text-(--text-muted)"
-            >
-              Open to collaboration, freelance work, or full-time opportunities.
-              Feel free to reach out.
-            </motion.p>
-          </div>
-        </div>
+    <RoutePageTemplate title="ABOUT">
+      <div className="mx-auto max-w-5xl px-6 py-14 lg:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
+        >
+          <h2 className="text-4xl font-bold tracking-tight lg:text-5xl">
+            Yuvraj Kumar
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm text-(--text-muted)">
+            Frontend Developer based in Patna, India
+          </p>
+        </motion.div>
 
         <motion.div
-          className="flex flex-wrap justify-center items-stretch gap-6 py-12"
-          variants={parentVariants}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2"
         >
-          {data.map((item, i) => (
+          {cards.map((card) => (
             <motion.div
-              variants={borderVariants}
-              key={i}
-              className="p-5 w-64 flex overflow-hidden rounded-2xl"
+              key={card.title}
+              variants={cardVariants}
+              whileHover={{
+                y: -4,
+                transition: { type: "spring", stiffness: 200, damping: 18 },
+              }}
+              className="rounded-2xl border border-white/10 bg-(--bg-light) p-5 flex flex-col gap-3"
             >
-              <motion.a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={cardVariants}
-                className="w-full h-full flex flex-col justify-between bg-(--bg-light) p-5 rounded-2xl shadow-(--shadow-s) hover:scale-105 hover:-translate-y-1 transition duration-300"
-              >
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-
-                <p className="text-(--text-muted) wrap-break-word">
-                  {item.value}
-                </p>
-              </motion.a>
+              <h3 className="text-sm font-semibold tracking-wide">
+                {card.title}
+              </h3>
+              <p className="text-sm text-(--text-muted) leading-relaxed">
+                {card.body}
+              </p>
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
     </RoutePageTemplate>
   );
 };
 
-export default Contact;
+export default About;

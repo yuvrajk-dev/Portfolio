@@ -29,11 +29,11 @@ A modern developer portfolio built with **React.js**, **Tailwind CSS**, and **Mo
 
 ## 🛠️ Tech Stack
 
-| Category | Technology |
-| --- | --- |
-| Frontend | React.js, Tailwind CSS, Motion.dev |
-| Backend | Node.js, Express.js, Socket.IO |
-| Build & Deployment | Vite, Git, GitHub, Vercel, Render |
+| Category           | Technology                         |
+| ------------------ | ---------------------------------- |
+| Frontend           | React.js, Tailwind CSS, Motion.dev |
+| Backend            | Node.js, Express.js, Socket.IO     |
+| Build & Deployment | Vite, Git, GitHub, Vercel, Render  |
 
 ---
 

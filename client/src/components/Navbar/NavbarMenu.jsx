@@ -61,11 +61,8 @@ const NavbarMenu = ({ isOpen, setIsOpen, menuRef }) => {
             >
               <NavLink
                 onClick={() => setIsOpen(false)}
-                className={
-                  ({ isActive }) =>
-                    isActive
-                      ? "text-(--text)" // active → dark
-                      : "text-(--text-muted)" // inactive → muted
+                className={({ isActive }) =>
+                  isActive ? "text-(--text)" : "text-(--text-muted)"
                 }
                 to={`/${items}`}
               >

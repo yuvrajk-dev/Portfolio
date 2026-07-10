@@ -5,8 +5,6 @@ import { useEffect } from "react";
 import { socket } from "./components/utils/Socket";
 import MouseRender from "./components/utils/MouseRender";
 
-// https://webofdevs.com/
-
 function App() {
   useEffect(() => {
     let last = 0;

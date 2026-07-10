@@ -1,96 +1,122 @@
 import React from "react";
-import { easeOut, motion } from "motion/react";
+import { motion, easeOut } from "motion/react";
 import RoutePageTemplate from "./RoutePageTemplate";
 
 const data = [
   {
+    title: "Languages",
+    items: ["JavaScript (ES6+)", "HTML5", "CSS3"],
+  },
+  {
     title: "Frontend",
-    items: ["JavaScript (ES6+)", "React", "HTML5", "CSS3", "Responsive Design"],
+    items: [
+      "React",
+      "Redux Toolkit",
+      "React Router",
+      "Tailwind CSS",
+      "Motion.dev",
+    ],
   },
   {
-    title: "UI & Styling",
-    items: ["Material UI (MUI)", "Basic UI/UX", "Layouts & Spacing"],
+    title: "Backend & Database",
+    items: ["Node.js", "Express.js", "Supabase"],
   },
   {
-    title: "Backend & Data",
-    items: ["Node.js (Basics)", "Supabase", "REST APIs"],
+    title: "APIs & AI",
+    items: ["REST APIs", "TMDB API", "OpenRouter API"],
   },
   {
     title: "Tools",
-    items: ["Git & GitHub", "VS Code", "Canva"],
+    items: ["Git", "GitHub", "Vite", "VS Code", "Postman", "Vercel"],
+  },
+  {
+    title: "Core Concepts",
+    items: [
+      "Authentication",
+      "State Management",
+      "CRUD Operations",
+      "API Integration",
+      "Responsive Design",
+      "Component Architecture",
+    ],
   },
 ];
 
-const parentVariants = {
+const containerVariants = {
   hidden: {},
   show: {
-    transition: {
-      delayChildren: 1,
-      staggerChildren: 0.5,
-    },
-  },
-};
-
-const borderVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      delay: 0.6,
-      duration: 1,
-      ease: easeOut,
-    },
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
   },
 };
 
 const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: -50,
-    filter: "blur(6px)",
-  },
+  hidden: { opacity: 0, y: 30, scale: 0.97 },
   show: {
-    y: 0,
     opacity: 1,
-    filter: "blur(0px)",
-    transition: {
-      duration: 0.6,
-      ease: easeOut,
-    },
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.45, ease: easeOut },
   },
 };
 
 const Skills = () => {
   return (
-    <RoutePageTemplate title={"SKILLS"}>
-      <motion.div className="px-10 lg:px-20">
+    <RoutePageTemplate title="SKILLS">
+      <div className="mx-auto max-w-5xl px-6 py-14 lg:px-12">
         <motion.div
-          className="flex flex-wrap justify-center items-stretch gap-6 py-10"
-          variants={parentVariants}
-          initial="hidden"
-          animate="show"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
         >
-          {data.map((card, i) => (
+          <h2 className="text-4xl font-bold tracking-tight lg:text-5xl">
+            Tech Stack
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm text-(--text-muted)">
+            Technologies and tools I use to build modern web apps.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {data.map((section) => (
             <motion.div
-              variants={borderVariants}
-              key={i}
-              className="p-5 w-64 flex rounded-2xl overflow-hidden "
+              key={section.title}
+              variants={cardVariants}
+              whileHover={{
+                y: -4,
+                transition: { type: "spring", stiffness: 200, damping: 18 },
+              }}
+              className="rounded-2xl border border-white/10 bg-(--bg-light) p-5 flex flex-col gap-4"
             >
-              <motion.div
-                variants={cardVariants}
-                className=" w-full h-60 shadow-(--shadow-s) flex flex-col bg-(--bg-light) p-5 rounded-2xl hover:scale-105 transition duration-300"
-              >
-                <h3 className=" text-lg font-semibold mb-3">{card.title}</h3>
-                <ul className=" space-y-1 text-(--text-muted)">
-                  {card.items.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </motion.div>
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-semibold tracking-wide">
+                  {section.title}
+                </h3>
+                <span className="text-sm text-(--text-muted)">
+                  {section.items.length}
+                </span>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {section.items.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/10 px-3 py-1 text-sm text-(--text-muted)"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
     </RoutePageTemplate>
   );
 };

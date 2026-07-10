@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import "tailwindcss";
 
-/* https://tozaburo.github.io/ui-shades-generator/?settings=0.79%2C0.1741%2C155.38%2Cgreen%2Cstring%2C1.2%2C5%2C99%2C67%2Cstring%2Csigmoid%2Cfalse%2C0.79%2C0.1741%2C155.38%2Cgreen%2Cstring%2C1.2%2C5%2C99%2C67%2Cstring%2Csigmoid%2Cfalse */
 :root {
   --bg-dark: hsl(0 0% 90%);
   --bg: hsl(300 0% 95%);
@@ -12,16 +11,16 @@
   --mouse: hsl(0, 100%, 50%);
 
   --shadow-s:
-    inset 0 1px 2px #ffffff30, /* top highlight */ 0 1px 2px #00000030,
-    /* dark shadow */ 0 2px 4px #00000015; /* soft shadow */
+    inset 0 1px 2px #ffffff30, 0 1px 2px #00000030,
+    0 2px 4px #00000015;
 
   --shadow-m:
-    inset 0 1px 2px #ffffff50, /* top highlight */ 0 2px 4px #00000030,
-    /* dark shadow */ 0 4px 8px #00000015; /* soft shadow */
+    inset 0 1px 2px #ffffff50, 0 2px 4px #00000030,
+    0 4px 8px #00000015;
 
   --shadow-l:
-    inset 0 1px 2px #ffffff70, /* top highlight */ 0 4px 6px #00000030,
-    /* dark shadow */ 0 6px 10px #00000015; /* soft shadow */
+    inset 0 1px 2px #ffffff70, 0 4px 6px #00000030,
+    0 6px 10px #00000015;
 }
 
 * {

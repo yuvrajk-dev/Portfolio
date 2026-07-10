@@ -21,7 +21,6 @@ const NavToggleButton = ({ isOpen, setIsOpen }) => {
       }}
     >
       <motion.div className="flex gap-1  justify-center  items-center  ">
-        {/* text start */}
         <motion.div className="relative  px-2   overflow-hidden">
           <motion.p
             transition={{ type: "spring", stiffness: 150, damping: 15 }}
@@ -39,7 +38,6 @@ const NavToggleButton = ({ isOpen, setIsOpen }) => {
           </motion.p>
         </motion.div>
 
-        {/* end */}
         <motion.div
           transition={{ type: "spring", stiffness: 200, damping: 15 }}
           variants={{
