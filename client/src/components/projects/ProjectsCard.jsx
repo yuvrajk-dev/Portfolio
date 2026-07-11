@@ -20,7 +20,7 @@ const ProjectsCard = ({ isActive }) => {
       title: "CineAI",
       subtitle: "AI Movie Discovery Platform",
       description:
-        "Discover movies using natural language with OpenRouter AI, browse TMDB content, watch trailers, and manage favorites.",
+        "Discover movies using natural language with OpenRouter AI and browse TMDB content.",
       image: cineaiImg,
       tags: [
         "React",
