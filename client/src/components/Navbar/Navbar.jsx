@@ -37,7 +37,7 @@ const Navbar = () => {
         </span>
       </div>
 
-      <div className="flex items-center gap-7">
+      <div className="flex items-center gap-4">
         <motion.a
           href="/resume.pdf"
           target="_blank"
