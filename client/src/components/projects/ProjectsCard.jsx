@@ -124,7 +124,7 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
                   rel="noopener noreferrer"
                   className="rounded-xl bg-(--text) px-6 py-3 font-medium text-(--bg-light) transition-all duration-300 hover:-translate-y-1 hover:opacity-90 hover:shadow-(--shadow-l)"
                 >
-                  Live Demo ↗
+                  Live Demo
                 </a>
               </div>
             </div>

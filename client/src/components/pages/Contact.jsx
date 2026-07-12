@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, easeOut } from "motion/react";
 import RoutePageTemplate from "./RoutePageTemplate";
+import { CiLink } from "react-icons/ci";
 
 const data = [
   {
@@ -100,7 +101,7 @@ const Contact = () => {
                 </h3>
 
                 <span className="rounded-full bg-(--bg) px-3 py-1 text-xs font-medium text-(--text-muted)">
-                  ↗
+                  <CiLink />
                 </span>
               </div>
 
