@@ -154,7 +154,7 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
                     <div className="h-3 w-3 rounded-full bg-yellow-400" />
                     <div className="h-3 w-3 rounded-full bg-green-400" />
 
-                    <div className="ml-4 rounded-md bg-(--bg-dark) px-3 py-1 text-sm text-(--text-muted)">
+                    <div className="ml-3 lg:ml-4 rounded-md bg-(--bg-dark) px-3 py-1 text-sm text-(--text-muted)">
                       {new URL(project.live).hostname}
                     </div>
                   </div>
