@@ -1,6 +1,5 @@
 import Author from "../Author/Author";
 import Cards from "./Cards";
-import Footer from "../routes/Footer";
 
 const Home = () => {
   return (

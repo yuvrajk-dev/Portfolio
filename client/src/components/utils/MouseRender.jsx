@@ -8,7 +8,6 @@ const MouseRender = () => {
 
   useEffect(() => {
     socket.on("mouse", ({ id, x, y }) => {
-      console.log("recieved:", { id, x, y });
       setUsers((prev) => {
         if (!(id in prev) && Object.keys(prev).length >= 10) {
           return prev;
