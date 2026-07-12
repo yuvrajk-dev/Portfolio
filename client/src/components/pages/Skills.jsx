@@ -108,7 +108,7 @@ const Skills = () => {
                   damping: 18,
                 },
               }}
-              className="group flex flex-col gap-5 rounded-4xl border border-black/10 bg-(--bg-light) p-6 shadow-(--shadow-l) transition-shadow duration-100 hover:shadow-(--shadow-l)"
+              className="group flex flex-col gap-5 rounded-4xl border border-black/10 bg-(--bg-light) p-6 shadow-(--shadow-s) transition-shadow duration-100 hover:shadow-(--shadow-l)"
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-bold tracking-tight transition-opacity duration-300 group-hover:opacity-80">
