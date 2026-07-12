@@ -39,13 +39,11 @@ const containerVariants = {
 const cardVariants = {
   hidden: {
     opacity: 0,
-    y: 30,
-    scale: 0.97,
+    y: 20,
   },
   show: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
       duration: 0.45,
       ease: easeOut,
@@ -93,7 +91,7 @@ const Contact = () => {
                   damping: 18,
                 },
               }}
-              className="group flex flex-col gap-5 rounded-4xl border border-black/10 bg-(--bg-light) p-6 shadow-(--shadow-s) transition-all duration-100 hover:shadow-(--shadow-l)"
+              className="group flex flex-col gap-5 rounded-4xl border border-black/10 bg-(--bg-light) p-6 shadow-(--shadow-s) transition-shadow duration-100 hover:shadow-(--shadow-l)"
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-bold tracking-tight transition-opacity duration-300 group-hover:opacity-80">
