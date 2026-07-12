@@ -52,7 +52,12 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
   });
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.15 }}
+      className="mx-auto max-w-6xl px-6 py-16"
+    >
       {isActive && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -157,7 +162,7 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
           </motion.section>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
