@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "motion/react";
 import NavbarMenu from "./NavbarMenu";
 import NavToggleButton from "./NavToggleButton";
 import NavbarClock from "./NavbarClock";
-import { useRef } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
+  const arrowVariants = {
+    rest: { x: 0 },
+    hover: { x: 3 },
+  };
+
   return (
-    <header className=" sticky  top-0 px-8   z-999 flex  text-xl  items-center justify-between h-20  ">
-      <div className="flex  justify-center  items-center gap-2 ">
+    <header className="sticky top-0 z-999 flex h-20 items-center justify-between px-8 text-xl">
+      <div className="flex items-center gap-2">
         <motion.div
-          className=" rounded-full w-3 h-3 "
+          className="h-3 w-3 rounded-full"
           initial={{ scale: 1 }}
           animate={{
             scale: [1, 1.5, 1],
@@ -24,16 +28,53 @@ const Navbar = () => {
             repeat: Infinity,
             stiffness: 200,
           }}
-        ></motion.div>
-        <p className="  leading-none translate-y-px">INDIA</p>
-        <span className=" leading-none translate-y-px  ">
+        />
+
+        <p className="leading-none translate-y-px">INDIA</p>
+
+        <span className="leading-none translate-y-px">
           <NavbarClock />
         </span>
       </div>
 
-      <div ref={menuRef} className=" relative z-10">
-        <NavToggleButton isOpen={isOpen} setIsOpen={setIsOpen} />
-        <NavbarMenu menuRef={menuRef} isOpen={isOpen} setIsOpen={setIsOpen} />
+      <div className="flex items-center gap-7">
+        <motion.a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial="rest"
+          whileHover="hover"
+          whileTap={{ scale: 0.96 }}
+          variants={{
+            rest: { scale: 1 },
+            hover: { scale: 1.1 },
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 10,
+          }}
+          className="group inline-flex items-center gap-1 font-medium underline underline-offset-4"
+        >
+          Resume
+          <motion.span
+            className="inline-block  "
+            variants={arrowVariants}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 10,
+            }}
+          >
+            →
+          </motion.span>
+        </motion.a>
+
+        <div ref={menuRef} className="relative z-10">
+          <NavToggleButton isOpen={isOpen} setIsOpen={setIsOpen} />
+
+          <NavbarMenu menuRef={menuRef} isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
       </div>
     </header>
   );

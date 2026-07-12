@@ -18,8 +18,13 @@ const data = [
     ],
   },
   {
-    title: "Backend & Database",
-    items: ["Node.js", "Express.js", "Supabase"],
+    title: "Backend, Real-Time & Database",
+    items: [
+      "Node.js",
+      "Express.js",
+      "Socket.IO",
+      "Supabase(PostgreSQL, Auth, Storage)",
+    ],
   },
   {
     title: "APIs & AI",
@@ -27,7 +32,7 @@ const data = [
   },
   {
     title: "Tools",
-    items: ["Git", "GitHub", "Vite", "VS Code", "Postman", "Vercel"],
+    items: ["Git", "GitHub", "Vite", "VS Code", "Postman", "Vercel", "Render"],
   },
   {
     title: "Core Concepts",
