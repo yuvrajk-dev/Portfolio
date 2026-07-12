@@ -10,7 +10,7 @@ const AuthorBio = () => {
         <h1 className="text-xl  text-center  md:text-left lg:text-left">
           Frontend DEVELOPER
         </h1>
-        <p className="text-center text-m md:text-left lg:text-left ">
+        <p className="text-center text-base md:text-left lg:text-left ">
           Frontend Developer with hands-on experience shipping production-grade
           web apps using React, Redux Toolkit, and Supabase. Skilled in
           integrating REST and AI APIs (OpenRouter, TMDB), implementing
