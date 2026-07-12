@@ -10,7 +10,7 @@ const Navbar = () => {
   const menuRef = useRef(null);
 
   return (
-    <header className=" sticky  top-0 px-8  z-999 flex  text-xl  items-center justify-between h-20  ">
+    <header className=" sticky  top-0 px-8   z-999 flex  text-xl  items-center justify-between h-20  ">
       <div className="flex  justify-center  items-center gap-2 ">
         <motion.div
           className=" rounded-full w-3 h-3 "

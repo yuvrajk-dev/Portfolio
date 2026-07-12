@@ -23,7 +23,7 @@ const NavbarClock = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <span>{time}</span>;
+  return <span className="">{time}</span>;
 };
 
 export default NavbarClock;

@@ -8,7 +8,7 @@ import ProjectsCard from "../projects/ProjectsCard";
 const Projects = () => {
   return (
     <RoutePageTemplate title="PROJECTS">
-      <ProjectsCard isActive={true} />
+      <ProjectsCard isActive={true} delay={1.4} delay2={1.1} />
     </RoutePageTemplate>
   );
 };
