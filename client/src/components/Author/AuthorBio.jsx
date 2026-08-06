@@ -11,12 +11,11 @@ const AuthorBio = () => {
           Frontend DEVELOPER
         </h1>
         <p className="text-center text-base md:text-left lg:text-left ">
-          Frontend Developer with hands-on experience shipping production-grade
-          web apps using React, Redux Toolkit, and Supabase. Skilled in
-          integrating REST and AI APIs (OpenRouter, TMDB), implementing
-          real-time features with Socket.IO, and delivering polished, accessible
-          user interfaces. Currently expanding into TypeScript, Next.js, and
-          backend development with Node.js and Express.
+          Frontend Developer specializing in React and JavaScript with
+          experience building responsive, scalable web applications using React,
+          React Flow, Zustand, Redux Toolkit, FastAPI, Supabase, and REST APIs.
+          Passionate about creating intuitive user interfaces and integrating
+          AI-powered features.
         </p>
       </div>
     </div>
