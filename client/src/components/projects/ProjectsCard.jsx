@@ -2,9 +2,20 @@ import React from "react";
 import { motion, easeOut } from "motion/react";
 import taskstackImg from "../../assets/taskstack.webp";
 import cineaiImg from "../../assets/cineai.webp";
+import pipelineStudio from "../../assets/pipelineStudio.webp";
 
 const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
   const data = [
+    {
+      title: "Pipeline Studio",
+      subtitle: "Visual Workflow Builder",
+      description:
+        "A visual workflow builder built with React Flow, Zustand, and FastAPI for creating, connecting, and validating node-based pipelines.",
+      image: pipelineStudio,
+      tags: ["React Flow", "React", "Zustand", "FastAPI", "Tailwind CSS"],
+      github: "https://github.com/yuvrajk-dev/Pipeline-Studio",
+      live: "https://pipeline-studio-ai.vercel.app/",
+    },
     {
       title: "CineAI",
       subtitle: "AI Movie Discovery Platform",
