@@ -11,6 +11,8 @@ const data = [
     title: "Frontend",
     items: [
       "React",
+      "React Flow",
+      "Zustand",
       "Redux Toolkit",
       "React Router",
       "Tailwind CSS",
@@ -23,6 +25,7 @@ const data = [
       "Node.js",
       "Express.js",
       "Socket.IO",
+      "FastAPI",
       "Supabase(PostgreSQL, Auth, Storage)",
     ],
   },
