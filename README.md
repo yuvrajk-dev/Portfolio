@@ -52,14 +52,6 @@ server/
 └── package.json
 ```
 
----
-
-## 📸 Screenshots
-
-> soon.
-
----
-
 ## 🚀 Getting Started
 
 ### Clone the repository
