@@ -10,9 +10,9 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
       title: "Pipeline Studio",
       subtitle: "Visual Workflow Builder",
       description:
-        "A visual workflow builder built with React Flow, Zustand, and FastAPI for creating, connecting, and validating node-based pipelines.",
+        "A visual workflow builder built with React Flow, Zustand, and a REST API for creating, connecting, and validating node-based pipelines.",
       image: pipelineStudio,
-      tags: ["React Flow", "React", "Zustand", "FastAPI", "Tailwind CSS"],
+      tags: ["React", "React Flow", "Zustand", "Tailwind CSS", "REST API"],
       github: "https://github.com/yuvrajk-dev/Pipeline-Studio",
       live: "https://pipeline-studio-ai.vercel.app/",
     },

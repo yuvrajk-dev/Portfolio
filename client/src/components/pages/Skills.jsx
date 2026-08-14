@@ -25,8 +25,7 @@ const data = [
       "Node.js",
       "Express.js",
       "Socket.IO",
-      "FastAPI",
-      "Supabase(PostgreSQL, Auth, Storage)",
+      "Supabase (PostgreSQL, Auth, Storage)",
     ],
   },
   {

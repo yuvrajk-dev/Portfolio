@@ -13,7 +13,7 @@ const AuthorBio = () => {
         <p className="text-center text-base md:text-left lg:text-left ">
           Frontend Developer specializing in React and JavaScript with
           experience building responsive, scalable web applications using React,
-          React Flow, Zustand, Redux Toolkit, FastAPI, Supabase, and REST APIs.
+          React Flow, Zustand, Redux Toolkit, Supabase, and REST APIs.
           Passionate about creating intuitive user interfaces and integrating
           AI-powered features.
         </p>
