@@ -39,7 +39,7 @@ const Navbar = () => {
 
       <div className="flex items-center gap-4">
         <motion.a
-          href="/resume.pdf"
+          href="/Yuvraj_Kumar_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           initial="rest"
