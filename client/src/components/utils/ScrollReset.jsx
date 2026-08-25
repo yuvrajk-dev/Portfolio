@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLenis } from "lenis/react";
 
@@ -6,7 +6,7 @@ const ScrollReset = () => {
   const { pathname } = useLocation();
   const lenis = useLenis();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (lenis) {
       lenis.scrollTo(0, { immediate: true });
       return;
