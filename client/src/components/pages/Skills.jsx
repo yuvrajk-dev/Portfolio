@@ -5,47 +5,42 @@ import RoutePageTemplate from "./RoutePageTemplate";
 const data = [
   {
     title: "Languages",
-    items: ["JavaScript (ES6+)", "HTML5", "CSS3"],
+    items: ["JavaScript (ES6+)"],
   },
+
   {
     title: "Frontend",
     items: [
-      "React",
+      "React.js",
       "React Flow",
-      "Zustand",
       "Redux Toolkit",
+      "Zustand",
       "React Router",
       "Tailwind CSS",
       "Motion.dev",
+      "HTML5",
+      "CSS3",
     ],
   },
+
   {
-    title: "Backend, Real-Time & Database",
-    items: [
-      "Node.js",
-      "Express.js",
-      "Socket.IO",
-      "Supabase (PostgreSQL, Auth, Storage)",
-    ],
+    title: "Backend",
+    items: ["Node.js", "Express.js", "Socket.IO", "REST APIs"],
   },
+
   {
-    title: "APIs & AI",
-    items: ["REST APIs", "TMDB API", "OpenRouter API"],
+    title: "Databases",
+    items: ["MongoDB", "Mongoose", "Supabase"],
   },
+
   {
-    title: "Tools",
-    items: ["Git", "GitHub", "Vite", "VS Code", "Postman", "Vercel", "Render"],
+    title: "APIs & Integrations",
+    items: ["OpenRouter", "TMDB API"],
   },
+
   {
-    title: "Core Concepts",
-    items: [
-      "Authentication",
-      "State Management",
-      "CRUD Operations",
-      "API Integration",
-      "Responsive Design",
-      "Component Architecture",
-    ],
+    title: "Tools & Deployment",
+    items: ["Git", "GitHub", "Vercel", "Render", "Vite", "Postman", "VS Code"],
   },
 ];
 

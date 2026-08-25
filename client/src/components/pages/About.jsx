@@ -5,19 +5,19 @@ import RoutePageTemplate from "./RoutePageTemplate";
 const cards = [
   {
     title: "Who I Am",
-    body: "Frontend Developer from Patna, India. I enjoy turning ideas into polished, production-ready web apps that feel good to use.",
+    body: "Software Engineer from Patna, India. I enjoy turning ideas into working products across the frontend and backend.",
   },
   {
     title: "What Drives Me",
-    body: "I care about clean code, smooth interactions, and shipping things that actually work. Every project is a chance to learn something new.",
+    body: "I care about clean code, thoughtful architecture, and building software that actually works. Every project is an opportunity to learn, experiment, and solve real problems.",
   },
   {
     title: "Background",
-    body: "B.Sc. in Information Technology from Anugrah Narayan College, Patna. Self-driven beyond the classroom — most of what I know came from building real projects.",
+    body: "B.Sc. in Information Technology from Anugrah Narayan College, Patna. Most of my development experience has come from building and deploying real projects independently.",
   },
   {
     title: "Right Now",
-    body: "Expanding into TypeScript and Next.js while deepening my Node.js and Express skills. Open to collaboration, freelance, or a full-time role.",
+    body: "Building full-stack applications with React, Node.js, Express, and MongoDB while exploring new technologies through hands-on projects. Open to collaboration and full-time software engineering opportunities.",
   },
 ];
 
@@ -59,7 +59,7 @@ const About = () => {
           <h2 className="text-4xl font-bold lg:text-5xl">Yuvraj Kumar</h2>
 
           <p className="mx-auto mt-5 max-w-xl text-sm text-(--text-muted)">
-            Frontend Developer based in Patna, India
+            Software Engineer based in Patna, India
           </p>
         </motion.div>
 
@@ -94,7 +94,9 @@ const About = () => {
                 </span>
               </div>
 
-              <p className="text-base leading-8 text-(--text-muted)">{card.body}</p>
+              <p className="text-base leading-8 text-(--text-muted)">
+                {card.body}
+              </p>
             </motion.div>
           ))}
         </motion.div>

@@ -8,14 +8,14 @@ const AuthorBio = () => {
       </div>
       <div className=" flex-1 max-w-[90ch] leading-snug text-sm text-(--text-muted) space-y-3">
         <h1 className="text-xl  text-center  md:text-left lg:text-left">
-          Frontend DEVELOPER
+          SOFTWARE ENGINEER
         </h1>
         <p className="text-center text-base md:text-left lg:text-left ">
-          Frontend Developer specializing in React and JavaScript with
-          experience building responsive, scalable web applications using React,
-          React Flow, Zustand, Redux Toolkit, Supabase, and REST APIs.
-          Passionate about creating intuitive user interfaces and integrating
-          AI-powered features.
+          I'm a Software Engineer who enjoys building products from the
+          interface to the backend. I work primarily with JavaScript, React,
+          Node.js, and modern web technologies, with hands-on experience
+          building APIs, working with databases, implementing authentication,
+          integrating AI services, and developing real-time features.
         </p>
       </div>
     </div>

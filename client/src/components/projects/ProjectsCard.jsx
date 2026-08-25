@@ -10,7 +10,7 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
       title: "Pipeline Studio",
       subtitle: "Visual Workflow Builder",
       description:
-        "A visual workflow builder built with React Flow, Zustand, and a REST API for creating, connecting, and validating node-based pipelines.",
+        "A visual workflow builder for creating and connecting node-based pipelines, with a REST backend for workflow validation and DAG detection.",
       image: pipelineStudio,
       tags: ["React", "React Flow", "Zustand", "Tailwind CSS", "REST API"],
       github: "https://github.com/yuvrajk-dev/Pipeline-Studio",
@@ -20,7 +20,7 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
       title: "CineAI",
       subtitle: "AI Movie Discovery Platform",
       description:
-        "Discover movies using natural language with OpenRouter AI and browse TMDB content.",
+        "An AI-powered movie discovery platform that turns natural-language prompts into personalized movie recommendations using OpenRouter and TMDB.",
       image: cineaiImg,
       tags: [
         "React",
@@ -36,7 +36,7 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
       title: "TaskStack",
       subtitle: "Kanban Task Management",
       description:
-        "A task management application with authentication, CRUD operations, and a clean responsive interface built with React and Supabase.",
+        "A Kanban task management application with authentication, CRUD operations, and per-user data isolation using Supabase.",
       image: taskstackImg,
       tags: ["React", "Tailwind CSS", "Supabase", "React Router"],
       github: "https://github.com/yuvrajk-dev/TaskStack",
@@ -77,7 +77,8 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
           <h2 className="text-4xl font-bold lg:text-5xl">Featured Projects</h2>
 
           <p className="mx-auto mt-5 max-w-xl text-sm text-(--text-muted)">
-            Selected projects that showcase my frontend development skills.
+            Selected projects showcasing full-stack development, AI
+            integrations, backend systems, and modern web applications.
           </p>
         </motion.div>
       )}
