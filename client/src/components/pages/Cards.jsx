@@ -3,7 +3,7 @@ import ProjectsCard from "../projects/ProjectsCard";
 
 const Cards = () => {
   return (
-    <div className="bg-(--bg)   overflow-hidden min-h-screen items-center   w-full p-5 flex flex-col">
+    <div className="relative z-10 bg-(--bg) overflow-hidden min-h-screen items-center w-full p-5 flex flex-col">
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 80 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}

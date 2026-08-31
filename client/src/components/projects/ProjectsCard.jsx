@@ -3,16 +3,37 @@ import { motion, easeOut } from "motion/react";
 import taskstackImg from "../../assets/taskstack.webp";
 import cineaiImg from "../../assets/cineai.webp";
 import pipelineStudio from "../../assets/pipelineStudio.webp";
+import devTinder from "../../assets/devTinder.webp";
 
 const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
   const data = [
     {
+      title: "DevTinder",
+      subtitle: "Developer Networking Platform",
+      description:
+        "A full-stack developer networking platform where users discover developers, send and manage connection requests, with a stateful request system that prevents duplicates and filters already-connected profiles from the feed.",
+      image: devTinder,
+      tags: [
+        "React",
+        "Redux Toolkit",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "bcrypt",
+      ],
+      github: "https://github.com/yuvrajk-dev/DevTinder-Frontend",
+      backend: "https://github.com/yuvrajk-dev/DevTinder-Backend",
+      live: "https://devtinder-social.vercel.app/",
+    },
+    {
       title: "Pipeline Studio",
       subtitle: "Visual Workflow Builder",
       description:
-        "A visual workflow builder for creating and connecting node-based pipelines, with a REST backend for workflow validation and DAG detection.",
+        "A node-based visual workflow builder with drag-and-drop canvas, 9 reusable node types, and a FastAPI backend that validates graphs and detects circular dependencies via DAG analysis.",
       image: pipelineStudio,
-      tags: ["React", "React Flow", "Zustand", "Tailwind CSS", "REST API"],
+      tags: ["React", "React Flow", "Zustand", "Tailwind CSS", "FastAPI"],
       github: "https://github.com/yuvrajk-dev/Pipeline-Studio",
       live: "https://pipeline-studio-ai.vercel.app/",
     },
@@ -20,7 +41,7 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
       title: "CineAI",
       subtitle: "AI Movie Discovery Platform",
       description:
-        "An AI-powered movie discovery platform that turns natural-language prompts into personalized movie recommendations using OpenRouter and TMDB.",
+        "An AI-powered movie discovery platform that converts natural-language prompts into personalized recommendations by combining OpenRouter's LLM with TMDB's movie database.",
       image: cineaiImg,
       tags: [
         "React",
@@ -36,7 +57,7 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
       title: "TaskStack",
       subtitle: "Kanban Task Management",
       description:
-        "A Kanban task management application with authentication, CRUD operations, and per-user data isolation using Supabase.",
+        "A Kanban board with native drag-and-drop across task columns, per-user data isolation via Supabase Row Level Security, and protected routes with persistent authentication.",
       image: taskstackImg,
       tags: ["React", "Tailwind CSS", "Supabase", "React Router"],
       github: "https://github.com/yuvrajk-dev/TaskStack",
@@ -75,10 +96,8 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
           className="mb-24 text-center"
         >
           <h2 className="text-4xl font-bold lg:text-5xl">Featured Projects</h2>
-
           <p className="mx-auto mt-5 max-w-xl text-sm text-(--text-muted)">
-            Selected projects showcasing full-stack development, AI
-            integrations, backend systems, and modern web applications.
+            Four production apps — from AI integrations to developer networking.
           </p>
         </motion.div>
       )}
@@ -141,6 +160,16 @@ const ProjectsCard = ({ isActive, delay = 0, delay2 = 0 }) => {
                   >
                     GitHub
                   </a>
+                  {project?.backend && (
+                    <a
+                      href={project.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-xl border border-black/10 bg-(--bg-light) px-6 py-3 font-medium transition-all duration-300 hover:-translate-y-1 hover:bg-(--bg) hover:shadow-(--shadow-m)"
+                    >
+                      Backend
+                    </a>
+                  )}
 
                   <a
                     href={project.live}

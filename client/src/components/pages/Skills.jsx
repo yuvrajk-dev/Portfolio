@@ -11,12 +11,13 @@ const data = [
   {
     title: "Frontend",
     items: [
-      "React.js",
-      "React Flow",
+      "React",
       "Redux Toolkit",
       "Zustand",
       "React Router",
+      "React Flow",
       "Tailwind CSS",
+      "DaisyUI",
       "Motion.dev",
       "HTML5",
       "CSS3",
@@ -24,18 +25,21 @@ const data = [
   },
 
   {
-    title: "Backend",
-    items: ["Node.js", "Express.js", "Socket.IO", "REST APIs"],
+    title: "Backend & APIs",
+    items: [
+      "Node.js",
+      "Express.js",
+      "Socket.IO",
+      "Axios",
+      "JWT",
+      "bcrypt",
+      "RESTful API Design",
+    ],
   },
 
   {
-    title: "Databases",
+    title: "Databases & Services",
     items: ["MongoDB", "Mongoose", "Supabase"],
-  },
-
-  {
-    title: "APIs & Integrations",
-    items: ["OpenRouter", "TMDB API"],
   },
 
   {
@@ -80,9 +84,8 @@ const Skills = () => {
           className="mb-20 text-center"
         >
           <h2 className="text-4xl font-bold lg:text-5xl">Tech Stack</h2>
-
           <p className="mx-auto mt-5 max-w-xl text-sm text-(--text-muted)">
-            Technologies and tools I use to build modern web applications.
+            Technologies I use to build full-stack web applications.
           </p>
         </motion.div>
 
@@ -111,10 +114,6 @@ const Skills = () => {
                 <h3 className="text-lg font-bold tracking-tight transition-opacity duration-300 group-hover:opacity-80">
                   {section.title}
                 </h3>
-
-                <span className="rounded-full bg-(--bg) px-3 py-1 text-xs font-medium text-(--text-muted)">
-                  {section.items.length}
-                </span>
               </div>
 
               <div className="flex flex-wrap gap-3">

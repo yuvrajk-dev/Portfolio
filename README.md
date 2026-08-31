@@ -37,21 +37,6 @@ A modern developer portfolio built with **React.js**, **Tailwind CSS**, and **Mo
 
 ---
 
-## 📁 Project Structure
-
-```text
-client/
-├── components/
-├── pages/
-├── assets/
-├── hooks/
-└── App.jsx
-
-server/
-├── index.js
-└── package.json
-```
-
 ## 🚀 Getting Started
 
 ### Clone the repository

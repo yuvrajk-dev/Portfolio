@@ -64,8 +64,7 @@ const Contact = () => {
           <h2 className="text-4xl font-bold lg:text-5xl">Let's Connect</h2>
 
           <p className="mx-auto mt-5 max-w-xl text-sm text-(--text-muted)">
-            Open to full-time software engineering opportunities and interesting
-            projects. Feel free to reach out.
+            Actively looking for full-stack engineering roles
           </p>
         </motion.div>
 
